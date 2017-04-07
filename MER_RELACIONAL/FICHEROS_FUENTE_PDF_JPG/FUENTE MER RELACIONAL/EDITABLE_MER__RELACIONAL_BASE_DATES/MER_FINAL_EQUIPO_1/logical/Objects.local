@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="08EF7F42-1DB5-EED1-BA6E-92A88C6906B7" name="Acceso" seqName="seg_0"/>
+   <object objectType="Entity" objectID="F7241B32-DF0A-8A42-75D0-9393F4C652D4" name="Centro" seqName="seg_0"/>
+   <object objectType="Entity" objectID="699E66E9-8E75-2AF5-418D-56D26EF4E26E" name="Parte" seqName="seg_0"/>
+   <object objectType="Entity" objectID="47FEA0CB-4D93-F7DF-0D35-A1EA7FBFBC9E" name="Trabajador" seqName="seg_0"/>
+   <object objectType="Entity" objectID="7E20D120-6AE7-3E22-79EA-41C22A7ECD31" name="Vehiculo" seqName="seg_0"/>
+   <object objectType="Entity" objectID="1489F03B-C8A6-0D99-A3FD-D083B6C955AD" name="Viaje" seqName="seg_0"/>
+   <object objectType="Relation" objectID="523D500C-13A0-FBBC-62F4-C98BB51DDB12" name="accede" seqName="seg_0"/>
+   <object objectType="Relation" objectID="8AB634B7-658E-424A-CE1B-CB0840903E6A" name="genera" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C1F83161-1A2C-70DA-6FFA-E492707082B8" name="participa" seqName="seg_0"/>
+   <object objectType="Relation" objectID="60D331C3-48C9-9A0E-50D9-69D107DF3F77" name="tiene" seqName="seg_0"/>
+   <object objectType="Relation" objectID="E88774A9-D29D-DB1E-02A7-6C1B20C87A19" name="utiliza" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

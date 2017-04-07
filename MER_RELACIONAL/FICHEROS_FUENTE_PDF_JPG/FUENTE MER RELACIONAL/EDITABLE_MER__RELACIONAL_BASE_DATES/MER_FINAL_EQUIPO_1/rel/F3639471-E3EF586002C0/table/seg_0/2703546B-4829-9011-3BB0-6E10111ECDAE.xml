@@ -1,0 +1,264 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2703546B-4829-9011-3BB0-6E10111ECDAE" name="Trabajador">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>47FEA0CB-4D93-F7DF-0D35-A1EA7FBFBC9E</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="dni" id="E7A366C1-A3E3-5A01-DFB4-62775CFA690A">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>A883513B-5483-8FA8-5318-1ABA4632C04F</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="52CF71A6-B672-95C1-1BD7-DC7AED0700C9">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>8D43050C-2DEA-4A5A-1664-7E2E5E4A84D6</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido1" id="03A1A745-9024-10FB-4780-E074E7D759CE">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>13061142-FF61-F985-08BC-652A8607D66C</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido2" id="EE735E6C-2C4E-0BB1-7BF5-EAF9FA60389F">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>D04FF08D-6A2C-A0AD-9FE4-14F9CF60EA00</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="calle" id="81B6B792-E790-4863-D6E5-B84F33347799">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>1A148339-5A8D-48F7-F5D5-D57204D84F73</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numeroPortal" id="E47AA7F7-01EB-BA29-DFFE-95FD51F732B8">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>F0414F60-5322-3E24-C0F7-A114DDF08059</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="piso" id="F91BCECA-9ED4-5C94-31E9-835480ED5D3F">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>A42231E5-217F-3619-3A4D-CEF5FB037B63</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mano" id="C45398D2-E953-2971-9861-3B1E0700D73C">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>E236BE6B-7739-5239-2ADA-40E38D7CF337</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telfEmpresa" id="6EF12A5D-3DE4-7416-C9ED-3C5BB86E04A5">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>AD703AB9-C09D-9E29-DE99-2E0BA4FA748A</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telfPersonal" id="4DC3D93E-A766-6EB9-60F6-BE68992DEBC2">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>D9928FDC-5F58-B094-67FA-49A4B17EC001</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaNacimiento" id="9D7E394D-3575-45B4-125D-B2724C6D8497">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>CCB573DA-F169-D812-BA63-2419AE0E983C</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salario" id="70D9553F-FB70-2D0E-077A-C0520AAF8EDF">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>83734F84-D60F-0B63-2EB6-266FD9541F54</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="categoria" id="BA1F55A3-9C74-EEB6-C008-F4F421B0EDCD">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>A2FC1C42-3CAE-F12F-0C30-CB046503B2C6</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Centro_idCentro" id="8C5CFC3A-5297-87C1-3D00-E9E9065163D9">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>4ACDB94A-C6EF-DEC3-16D3-DC980B701BAF</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B7A1E45-07C9-D16F-1B3E-C6975688A25B" referredColumn="DF17610C-F831-6888-03AC-148D9BC765C4"/>
+</associations>
+</Column>
+<Column name="Acceso_usuario" id="A7180EC4-AD05-D5BB-73FE-8A8EC4A1626A">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>89F1DE5A-F1CD-0DC1-204A-0BAC0547E25E</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="617044AA-9F25-F4D2-C30A-59BC0EFF5C29" referredColumn="ABB30938-EC44-828D-1D19-A23354B19429"/>
+</associations>
+</Column>
+<Column name="Acceso_contrasena" id="4E902339-B9EF-876E-6F8F-9EECDCBC669B">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>63940C25-8C1D-657D-540A-F5E47A9184D2</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="617044AA-9F25-F4D2-C30A-59BC0EFF5C29" referredColumn="1B128E8A-AB7F-0C19-1B90-68EE61EAF28A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CC60BBD7-A5B7-98F3-5C71-496B49553301" name="Trabajador_PK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>FF89C4C6-6D0A-0803-6498-A4C455589D2C</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7A366C1-A3E3-5A01-DFB4-62775CFA690A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CBB9E911-3511-D84B-5351-B4B44CE41DCF" name="Trabajador__IDX">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>523D500C-13A0-FBBC-62F4-C98BB51DDB12</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="A7180EC4-AD05-D5BB-73FE-8A8EC4A1626A"/>
+<colUsage columnID="4E902339-B9EF-876E-6F8F-9EECDCBC669B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="96B55838-7A5C-67B1-6827-391973393C5D" name="Trabajador_Acceso_FK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>523D500C-13A0-FBBC-62F4-C98BB51DDB12</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7180EC4-AD05-D5BB-73FE-8A8EC4A1626A"/>
+<colUsage columnID="4E902339-B9EF-876E-6F8F-9EECDCBC669B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="791DD38B-F391-512E-F5EB-03218E4C5D23" name="Trabajador_Centro_FK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>60D331C3-48C9-9A0E-50D9-69D107DF3F77</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C5CFC3A-5297-87C1-3D00-E9E9065163D9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

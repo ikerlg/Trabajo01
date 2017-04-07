@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7E20D120-6AE7-3E22-79EA-41C22A7ECD31" name="Vehiculo">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:21:56 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="matricula" id="3A1F5C76-B2C4-981B-A44D-448275BE8E8C">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:22:04 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="DA103124-126E-41A6-0DE3-8A62E28E41DC">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:23:13 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="km" id="5FD11463-4D7B-D085-46A0-7CE6330668D6">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:23:30 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idParte" id="FB81311E-A19B-CAD3-0B15-62F71ECD2752">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:29:08 UTC</createdTime>
+<generatorID>E88774A9-D29D-DB1E-02A7-6C1B20C87A19</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<referedAttribute>1D4FD27F-6B2B-7D1E-BBE4-24AC52D8D189</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DE39636B-D093-4082-800C-3CC42F2399CF" name="Vehiculo PK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:22:12 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3A1F5C76-B2C4-981B-A44D-448275BE8E8C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

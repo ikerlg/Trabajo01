@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="participa" directorySegmentName="seg_0" id="C1F83161-1A2C-70DA-6FFA-E492707082B8">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:28:30 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<sourcePk>FF89C4C6-6D0A-0803-6498-A4C455589D2C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>47FEA0CB-4D93-F7DF-0D35-A1EA7FBFBC9E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>699E66E9-8E75-2AF5-418D-56D26EF4E26E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

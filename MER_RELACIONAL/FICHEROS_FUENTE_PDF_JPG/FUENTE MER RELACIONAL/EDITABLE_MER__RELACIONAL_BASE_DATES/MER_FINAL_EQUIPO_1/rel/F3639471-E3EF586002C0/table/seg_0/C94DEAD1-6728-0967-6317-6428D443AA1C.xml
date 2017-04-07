@@ -1,0 +1,233 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C94DEAD1-6728-0967-6317-6428D443AA1C" name="Parte">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>699E66E9-8E75-2AF5-418D-56D26EF4E26E</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idParte" id="724F3486-AF90-21B2-1387-2D83ACD1CC59">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>1D4FD27F-6B2B-7D1E-BBE4-24AC52D8D189</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="93C18A31-64F8-BBA3-AA6E-36BBA95BAEAA">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>3733AD81-FF7B-7DB0-7625-3DC189A356CD</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kmInicio" id="20FE009A-F790-77E5-B42A-016CC84D4A2B">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>54B80C56-4D1E-8C15-0BA4-60280CD746A4</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kmFinal" id="B478ECE2-FE33-BBA5-20D9-B9CEFE11E012">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>E2657863-6876-C2CA-94E2-7834060F5108</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="incidencias" id="282A8019-D324-6941-C5D7-E6DA9F4C09CD">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>DD6B2A19-606E-B1F4-E5CE-916147E9EFAB</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="avisos" id="F534EDE4-C6C8-8C62-6512-1696E0373432">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>1636EFE2-9CA2-6F70-3CC3-8FA05CB76067</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="finalizado" id="D62E748F-8B69-F5DB-9E3D-0F046538B778">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>5A5FD70B-3D55-95D8-BD76-D59DB1BC102D</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gasoil" id="8C66C180-86A0-2712-1536-F048D8AF6784">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>6F1B307B-F82E-F344-E9DD-03314E21EAFE</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="autopistas" id="440A7FF6-9AB9-7197-83DF-DD694855153F">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>6DEC12EA-8A62-31F5-410D-E0C830774337</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dietas" id="19537A57-97EC-28B2-EE99-A98AF8979117">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>597427A8-E707-A068-2739-60B5BE6CEA25</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="otrosGastos" id="7C5DFC40-4D08-E122-BFCE-0DD38A926CBD">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>5DB27929-2C09-B470-D9F5-F20D83A86B81</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="horasTrabajadas" id="61D414A2-B3A9-4BEB-2687-C5E3BACCAEEF">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>8E312CAB-AD0C-C748-BFDE-F1804850D9A1</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Trabajador_dni" id="66A2B469-45D5-56CF-00A0-F02389507B86">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>4CCDBA57-7CF0-D603-444C-981D290E4A98</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5C11D7A9-DEFC-BC2E-9DFF-EFF8B02AB21A" referredColumn="E7A366C1-A3E3-5A01-DFB4-62775CFA690A"/>
+</associations>
+</Column>
+<Column name="Vehiculo_matricula" id="27722F54-8DDD-BCDC-315E-890D147C5FC2">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>9923BF63-A155-20DF-6E83-69DFBA58B27C</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="93A55B01-D930-2FF5-9187-15BF4983DD0A" referredColumn="A85D385A-70E7-8061-A60E-95C0E1D5F3EF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5953AB2F-7F5D-5726-192C-E984FF3330D0" name="Parte_PK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>184660F7-F33E-58C2-97ED-20CAF2AE1EDA</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="724F3486-AF90-21B2-1387-2D83ACD1CC59"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3206E18B-AD45-C7ED-2D80-B7F719BCB44D" name="Parte__IDX">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E88774A9-D29D-DB1E-02A7-6C1B20C87A19</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="27722F54-8DDD-BCDC-315E-890D147C5FC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2806B947-60D9-9ECA-C0EA-131DA4B86871" name="Parte_Trabajador_FK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>C1F83161-1A2C-70DA-6FFA-E492707082B8</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66A2B469-45D5-56CF-00A0-F02389507B86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17DA1526-F4CE-AF92-7967-5314F2BDAD66" name="Parte_Vehiculo_FK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>E88774A9-D29D-DB1E-02A7-6C1B20C87A19</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27722F54-8DDD-BCDC-315E-890D147C5FC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
