@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="utiliza" directorySegmentName="seg_0" id="E88774A9-D29D-DB1E-02A7-6C1B20C87A19">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:29:08 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<sourcePk>184660F7-F33E-58C2-97ED-20CAF2AE1EDA</sourcePk>
+<targetPk>DE39636B-D093-4082-800C-3CC42F2399CF</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>699E66E9-8E75-2AF5-418D-56D26EF4E26E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>7E20D120-6AE7-3E22-79EA-41C22A7ECD31</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

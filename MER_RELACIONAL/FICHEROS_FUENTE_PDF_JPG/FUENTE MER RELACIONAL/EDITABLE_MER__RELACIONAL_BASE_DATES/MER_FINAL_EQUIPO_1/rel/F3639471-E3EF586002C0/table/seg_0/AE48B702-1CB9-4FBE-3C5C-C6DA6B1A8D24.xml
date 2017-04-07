@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AE48B702-1CB9-4FBE-3C5C-C6DA6B1A8D24" name="Vehiculo">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>7E20D120-6AE7-3E22-79EA-41C22A7ECD31</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="matricula" id="A85D385A-70E7-8061-A60E-95C0E1D5F3EF">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>3A1F5C76-B2C4-981B-A44D-448275BE8E8C</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="DF6EF2E2-58BC-8514-E624-7FA980E389FE">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>DA103124-126E-41A6-0DE3-8A62E28E41DC</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="km" id="7EC9E72C-FB85-23F2-2EB7-C0AB7E3D94D2">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>5FD11463-4D7B-D085-46A0-7CE6330668D6</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Parte_idParte" id="7567945B-ADC9-8591-793C-9B1C4DDE0573">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>FB81311E-A19B-CAD3-0B15-62F71ECD2752</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B4A8ED6-ABA6-47B4-3E3E-C7BD1BD10960" referredColumn="724F3486-AF90-21B2-1387-2D83ACD1CC59"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="386EE874-E68B-B582-B091-E51234CC63AF" name="Vehiculo_PK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>DE39636B-D093-4082-800C-3CC42F2399CF</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A85D385A-70E7-8061-A60E-95C0E1D5F3EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93DE4B48-DC61-0F2D-D24D-90154630D4D3" name="Vehiculo__IDX">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E88774A9-D29D-DB1E-02A7-6C1B20C87A19</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="7567945B-ADC9-8591-793C-9B1C4DDE0573"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2EBD942D-582E-727B-4249-D6A512F9516E" name="Vehiculo_Parte_FK">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:32:07 UTC</createdTime>
+<generatorID>E88774A9-D29D-DB1E-02A7-6C1B20C87A19</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7567945B-ADC9-8591-793C-9B1C4DDE0573"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

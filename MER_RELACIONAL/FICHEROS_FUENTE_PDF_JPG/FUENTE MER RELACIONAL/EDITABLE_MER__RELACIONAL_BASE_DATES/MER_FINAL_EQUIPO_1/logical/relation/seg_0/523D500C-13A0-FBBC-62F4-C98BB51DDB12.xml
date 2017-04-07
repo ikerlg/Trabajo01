@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="accede" directorySegmentName="seg_0" id="523D500C-13A0-FBBC-62F4-C98BB51DDB12">
+<createdBy>MIGUEL</createdBy>
+<createdTime>2017-04-04 14:27:36 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER_FINAL_EQUIPO_1</ownerDesignName>
+<engineerTo>
+<item key="F3639471-8FFD-6475-12B8-E3EF586002C0" value="true"/>
+</engineerTo>
+<sourcePk>F97FA740-E38E-5786-18CA-8E7F2E101FD7</sourcePk>
+<targetPk>FF89C4C6-6D0A-0803-6498-A4C455589D2C</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>08EF7F42-1DB5-EED1-BA6E-92A88C6906B7</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>47FEA0CB-4D93-F7DF-0D35-A1EA7FBFBC9E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
