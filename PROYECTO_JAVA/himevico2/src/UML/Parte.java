@@ -44,6 +44,7 @@ public class Parte {
         this.otrosGastos = otrosGastos;
         this.incidencias = incidencias;
         this.horasTRabajadas = horasTRabajadas;
+         listViajes= new ArrayList();
     }
 
     public Parte(String idParte, Date fecha, Double kmInicio, Double kmFinal, boolean finalizado, Double gasoil, Double autopista, Double dietas, Double otrosGastos, String incidencias, Double horasTRabajadas, ArrayList<Viaje> listViajes) {

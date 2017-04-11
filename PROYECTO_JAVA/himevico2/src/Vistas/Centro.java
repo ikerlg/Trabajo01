@@ -216,7 +216,7 @@ public class Centro extends javax.swing.JFrame {
            if (datosCorrectos())
            {
              javax.swing.JOptionPane.showMessageDialog(this,"Datos correctos. Vamos a insertar en la base de  datos");
-           controladora.subirCebtro(tnombreC.getText(),tcalleC.getText(),tciudadC.getText(),tprovinciaC.getText(),Integer.parseInt(tnumeroC.getText()),Integer.parseInt( tcodpostalC.getText()),Integer.parseInt(ttlfC.getText()));
+           controladora.subirCentro(tnombreC.getText(),tcalleC.getText(),tciudadC.getText(),tprovinciaC.getText(),Integer.parseInt(tnumeroC.getText()),Integer.parseInt( tcodpostalC.getText()),Integer.parseInt(ttlfC.getText()));
              
            }
        }

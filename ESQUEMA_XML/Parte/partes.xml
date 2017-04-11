@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<partes>
+	<parte>  
+   		<IdParte></IdParte>>  
+   		<fecha></fecha>
+   		<kmInicio></kmInicio>
+   		<kmFinal></kmFinal>
+   		<incidencias></incidencias>
+   		<avisos></avisos>
+   		<finalizado></finalizado>
+   		<gasoil></gasoil>
+   		<autopistas></autopistas>
+   		<dietas></dietas>
+   		<otrosGastos></otrosGastos>
+   		<horasTrabajadas></horasTrabajadas>
+   		<trabajador_dni></trabajador_dni>
+   		<Vehiculo_matricula></Vehiculo_matricula>
+   		<viajes>
+   			<viaje>
+   				<albaran></albaran>
+   				<horaIncio></horaIncio>
+   				<horaFin></horaFin>
+   			</viaje>
+   		</viajes>
+
+	</parte>
+</partes>

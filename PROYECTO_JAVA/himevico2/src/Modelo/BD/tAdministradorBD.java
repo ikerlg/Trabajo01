@@ -14,10 +14,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.sql.Types;
+import java.sql.*;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import oracle.jdbc.OracleTypes;
 
 /**
  *
@@ -64,7 +65,7 @@ import javax.swing.JOptionPane;
              Psentencia.setString(2,t.getA().getContraseña());
              Psentencia.setString(3, t.getDni());
              //centro arraylist pasarle el T
-          plantilla="INSERT INTO CENTRO()"   
+//          plantilla="INSERT INTO CENTRO()"   
           
           Psentencia.executeUpdate();
             
@@ -101,7 +102,7 @@ import javax.swing.JOptionPane;
 
     public static void modificarT(Trabajador t) throws Exception{
             GenericoBD.CONECTAR();
-            plantilla = "update TRABAJADOR set  nombre=?,apellido1=?,apellido2=?,calle=?,numeroPorta=?"
+            plantilla = "update TRABAJADOR set  nombre=?,apellido1=?,apellido2=?,calle=?,numeroPortal=?"
                     + "piso=?,mano=?,telEmpresa=?,telPersonal=?,fechaNacimiento=?,salario=?,categoria=?,idCentro=? where dni = ?";
           Psentencia = GenericoBD.CONECTAR().prepareStatement(plantilla);
             
@@ -188,6 +189,7 @@ import javax.swing.JOptionPane;
               GenericoBD.cerrarBD();     
                        }
                 }
+     /*
 public static   ArrayList listaCentros(){
    
  
@@ -209,48 +211,76 @@ public static   ArrayList listaCentros(){
     catch (Exception e){JOptionPane.showMessageDialog(null, "fallo en lugares" + e.getMessage() + c);}
  return lislu;
 } 
-    
+    */
    //callables:
-public class FuncNombre {
-
-public void mostrarTrabajador() {
+public static   ArrayList listaCentros(){
+  String lu="";
+ArrayList<String>listacentros=new ArrayList();
 
 try{
 
 GenericoBD.CONECTAR();
 
-
-
-//construir orden DE LLAMADA
-
-String sql= "{ ? = call nombre_dep (?, ?) } ";
-
-// Preparamos la llamada
-
+String sql= "{ call listacentros (?)} ";
 CallableStatement llamada = con.prepareCall(sql);
+llamada.registerOutParameter(1, OracleTypes.CURSOR); //parametro OUT
+llamada.execute();
+ResultSet res=null;
+res=(ResultSet)llamada.getObject(1);
+//ejecutar el procedimiento
 
-llamada.registerOutParameter(1, Types.VARCHAR); //valor devuelto
+    if(res.next())
+     {      
+         lu=res.getString("nombre");
+      listacentros.add(lu);
+       }   
+                llamada.close();
+                    con.close();} 
+        catch (Exception e) {e.printStackTrace();}
+//fin de mai      
+return listacentros;
+    }   
+public static Trabajador consultaT(String vDni){
+    t = new Trabajador();   
+    try{
+GenericoBD.CONECTAR();
 
-llamada.setInt(2,Integer.parseInt(dep)); // dep param de entrada
+String sql= "{ call consulta_trabajador (?,?)} ";
+CallableStatement llamada = con.prepareCall(sql);
+llamada.setString(1, vDni);
+llamada.registerOutParameter(1, OracleTypes.CURSOR); //parametro OUT
 
-llamada.registerOutParameter(3, Types.VARCHAR); //parametro OUT
-
-llamada.executeUpdate(); //ejecutar el procedimiento
-
-System.out.println ("Nombre Dep: "+llamada.getString(1) + " Localidad:
-
-"+llamada.getString(3) ");
-
+ResultSet res=llamada.executeQuery();
+res.getObject(2);
+if(res.next()){
+    t.setDni(res.getNString("dni"));
+    t.setNombre(res.getNString("nombre"));
+    t.setApellido1(res.getNString("apellido1"));
+    t.setApellido2(res.getNString("apellido2"));
+    t.setCalle(res.getNString("calle"));
+    t.setMano(res.getNString("mano"));
+    t.setCategoria(res.getNString("categoria"));
+    t.setNumeroPortal(res.getInt("numeroPortal"));
+    t.setTelEmpresa(res.getInt("telEmpresa"));
+    t.setPiso(res.getInt("piso"));
+    t.setTelPersonal(res.getInt("telPersonal"));
+    t.setSalario(res.getDouble("salario"));
+    t.setFechaNacimiento(res.getDate("fechaNacimiento"));
+}
 llamada.close();
 
 con.close();
 
 } catch (Exception e) {e.printStackTrace();}
 //fin de main
-        }
-}
-    }      
     
+   return t; 
+}
+
+
+
+
+}
     
     
     

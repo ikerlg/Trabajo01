@@ -25,7 +25,7 @@ public class GenericoBD {
          
           
     con =   DriverManager.getConnection("jdbc:oracle:thin:@10.10.10.9:1521:db12102","proyectofinal", "proyectofinal");
-    if(con.isValid(1)==true)JOptionPane.showMessageDialog(null, "cenctado");
+    if(con.isValid(1)==true)JOptionPane.showMessageDialog(null, "conectado");
     return con;
     }
     

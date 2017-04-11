@@ -36,9 +36,8 @@ public class datosTraba extends javax.swing.JFrame {
         initComponents();
           setLocationRelativeTo(null);
              try{
-                  lcen=tAdministradorBD.listaCentros();
-                    String lu="";
-        
+                  lcen=controladora.mostrarL();
+         
                      for(int x=0;x<lcen.size();x++){
         
                             comboC.insertItemAt(lcen.get(x),x);
@@ -343,7 +342,7 @@ public class datosTraba extends javax.swing.JFrame {
 
     private void bSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalirActionPerformed
         // TODO add your handling code here:
-        controladora.cerrarV();
+        controladora.acabarV();
     }//GEN-LAST:event_bSalirActionPerformed
 
     private void comboCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboCActionPerformed

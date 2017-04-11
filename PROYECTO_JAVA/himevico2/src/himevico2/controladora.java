@@ -99,9 +99,9 @@ public class controladora {
     }
     public static void bajaCentro(String nombre){}
     public static  ArrayList  mostrarL()throws Exception{
-         ArrayList<String>lu=new ArrayList();
-             lu=tAdministradorBD.listaCentros();
-                     return lu;
+         ArrayList<String>liCentros=new ArrayList();
+             liCentros=tAdministradorBD.listaCentros();
+                     return liCentros;
      }
     
 }
