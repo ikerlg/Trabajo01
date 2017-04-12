@@ -23,17 +23,14 @@ import javax.swing.JOptionPane;
  *
  * @author Iker
  */
-public class Centro extends javax.swing.JFrame {
+public class panelCentro extends javax.swing.JFrame {
 
     /**
      * Creates new form Centro
      */
-    public Centro() {
-        initComponents();
-          setLocationRelativeTo(null);
-    }
+    
       private static String operacion;
-       public Centro(String operacion) {
+       public panelCentro(String operacion) {
             this.operacion = operacion;
         initComponents();
           setLocationRelativeTo(null);
@@ -68,6 +65,7 @@ public class Centro extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(320, 320));
         getContentPane().setLayout(null);
 
         jLabel1.setText("CENTRO");
@@ -144,8 +142,13 @@ public class Centro extends javax.swing.JFrame {
         baceptarC.setBounds(74, 262, 92, 29);
 
         bsalirC.setText("Salir");
+        bsalirC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bsalirCActionPerformed(evt);
+            }
+        });
         getContentPane().add(bsalirC);
-        bsalirC.setBounds(258, 262, 75, 29);
+        bsalirC.setBounds(220, 260, 75, 29);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/imagenes/arenaG.jpeg"))); // NOI18N
         getContentPane().add(jLabel9);
@@ -180,19 +183,24 @@ public class Centro extends javax.swing.JFrame {
            else
                doAlta();
     }//GEN-LAST:event_baceptarCActionPerformed
+
+    private void bsalirCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsalirCActionPerformed
+        // TODO add your handling code here:
+        controladora.acabarV();
+    }//GEN-LAST:event_bsalirCActionPerformed
   private void doModificar()
     { 
         try{
            if (datosCorrectos())
            {
              javax.swing.JOptionPane.showMessageDialog(this,"Datos correctos. Vamos a grabar los cambios");
-             Controlador.doUpdate((String) cbLugar.getSelectedItem(),dcFecha.getDate(),tffHoraInicio.getText(),tftHoraFin.getText(),Integer.parseInt(tffAforo.getText()));
-             Controlador.volver(this);
+             controladora.modificarC(tnombreC.getText(),tcalleC.getText(),Integer.parseInt(tnumeroC.getText()),Integer.parseInt( tcodpostalC.getText()),tciudadC.getText(),tprovinciaC.getText(),Integer.parseInt(ttlfC.getText()));
+            
            }
        }
        catch(Exception e)
        {
-         javax.swing.JOptionPane.showMessageDialog(this,"Problemas con el alta "+e.getClass());
+         javax.swing.JOptionPane.showMessageDialog(this,"Problemas modificar "+e.getClass());
        }
 }
     private void doBaja(){
@@ -216,7 +224,7 @@ public class Centro extends javax.swing.JFrame {
            if (datosCorrectos())
            {
              javax.swing.JOptionPane.showMessageDialog(this,"Datos correctos. Vamos a insertar en la base de  datos");
-           controladora.subirCentro(tnombreC.getText(),tcalleC.getText(),tciudadC.getText(),tprovinciaC.getText(),Integer.parseInt(tnumeroC.getText()),Integer.parseInt( tcodpostalC.getText()),Integer.parseInt(ttlfC.getText()));
+           controladora.subirCentro(tnombreC.getText(),tcalleC.getText(),Integer.parseInt(tnumeroC.getText()),Integer.parseInt( tcodpostalC.getText()),tciudadC.getText(),tprovinciaC.getText(),Integer.parseInt(ttlfC.getText()));
              
            }
        }
@@ -238,11 +246,7 @@ public class Centro extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this,e.getMensaje());
             return false;
         }
-        catch(NombreNoValido e)
-        {
-            javax.swing.JOptionPane.showMessageDialog(this,"El nombre del Centro no es válido. \n Tiene que empezar con una letra y tener una longitud minima de 3");
-            return false;
-        }
+        
         catch(Exception e)
         {
             javax.swing.JOptionPane.showMessageDialog(this,"Problemas validando los datos de entrada");
@@ -253,11 +257,9 @@ public class Centro extends javax.swing.JFrame {
     private void validarNombre()throws Exception{
         String nombre = tnombreC.getText();
         if (nombre.isEmpty())
-            throw new CampoVacio("El nombre del acontecimiento es un dato obligatorio");
+            throw new CampoVacio("El nombre del CENTRO es un dato obligatorio");
        
-        Character primerCaracter = nombre.charAt(0);
-        if (Character.isDigit(primerCaracter) || nombre.length()< 10)
-            throw new NombreNoValido();
+       
        
     }
  
@@ -288,20 +290,21 @@ public class Centro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Centro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(panelCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Centro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(panelCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Centro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(panelCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Centro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(panelCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Centro().setVisible(true);
+                new panelCentro(operacion).setVisible(true);
             }
         });
     }

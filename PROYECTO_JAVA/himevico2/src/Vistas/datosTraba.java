@@ -24,7 +24,7 @@ import javax.swing.JOptionPane;
  * @author Iker
  */
 public class datosTraba extends javax.swing.JFrame {
-  private static String operacion;
+  private static String Operacion;
     /**
      * Creates new form Trabajador
      */
@@ -32,7 +32,7 @@ public class datosTraba extends javax.swing.JFrame {
   
  public datosTraba(String operacion) {
       ArrayList<String>lcen=new ArrayList();
-         this.operacion = operacion;
+        Operacion = controladora.selecOperacion(operacion);
         initComponents();
           setLocationRelativeTo(null);
              try{
@@ -249,14 +249,13 @@ public class datosTraba extends javax.swing.JFrame {
         getContentPane().add(acceso);
         acceso.setBounds(300, 270, 270, 110);
 
-        comboC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         comboC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboCActionPerformed(evt);
             }
         });
         getContentPane().add(comboC);
-        comboC.setBounds(460, 137, 96, 40);
+        comboC.setBounds(460, 137, 110, 40);
 
         jLabel5.setText("Centro");
         getContentPane().add(jLabel5);
@@ -276,43 +275,47 @@ public class datosTraba extends javax.swing.JFrame {
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
-         if (operacion.compareTo("baja")== 0)
+         if (Operacion.compareTo("baja")== 0)
        {
            doBaja();
        }
        else
-           if (operacion.compareTo("modificar")== 0)
+           if (Operacion.compareTo("modificar")== 0)
            {
                doModificar();
            }
            else
                doAlta();
-       
+         
+    } 
        // switch
     private void doModificar()
     { 
+        String vDni="";
+        vDni=JOptionPane.showInputDialog(null,"Dni del trabajador a modificar?");
+        controladora.consultaT(vDni);
         try{
            if (datosCorrectos())
            {
              javax.swing.JOptionPane.showMessageDialog(this,"Datos correctos. Vamos a grabar los cambios");
-             Controlador.doUpdate((String) cbLugar.getSelectedItem(),dcFecha.getDate(),tffHoraInicio.getText(),tftHoraFin.getText(),Integer.parseInt(tffAforo.getText()));
-             Controlador.volver(this);
+            controladora.modificarT(tdniT.getText(),tnombreT.getText(),tprimerAT.getText(),tsegundoAT.getText(),tcalleT.getText(),tmanoT.getText(),Categoria.getSelection().toString(),Integer.parseInt(tportalT.getText()),Integer.parseInt(tpisoT.getText()),Integer.parseInt(ttlfempreT.getText()),Integer.parseInt(ttlfpersoT.getText()),Double.parseDouble(tSalarioT.getText()),calendarnacimientoT.getDate());
+            
            }
        }
        catch(Exception e)
        {
-         javax.swing.JOptionPane.showMessageDialog(this,"Problemas con el alta "+e.getClass());
+         javax.swing.JOptionPane.showMessageDialog(this,"Problemas modificando "+e.getClass());
        }
-}
+    }
     private void doBaja(){
          String dni="";
         dni=JOptionPane.showInputDialog(null,"Dni del trabajador a eliminar?");
-    
+        
        try{
              int respuesta = javax.swing.JOptionPane.showConfirmDialog(this,"¿ Estas segur@?");
              if (respuesta == 0)
-                tAdministradorBD.bajaT(dni);
-          
+                controladora.bajaT(dni);
+          JOptionPane.showMessageDialog(null,"borrado");
           
        }
        catch(Exception e)
@@ -451,7 +454,7 @@ public class datosTraba extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new datosTraba(operacion).setVisible(true);
+                new datosTraba(Operacion).setVisible(true);
             }
         });
     }

@@ -4,10 +4,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/himevico2/controladora.java</file>
-            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/UML/tAdministrador.java</file>
+            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Modelo/BD/CentroBD.java</file>
+            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Modelo/BD/TrabajadorBD.java</file>
+            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Modelo/BD/GestionesBD.java</file>
+            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/UML/Centro.java</file>
             <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Modelo/BD/tAdministradorBD.java</file>
+            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Vistas/panelAdmin.java</file>
+            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Modelo/BD/ParteBD.java</file>
             <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Vistas/datosTraba.java</file>
-            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Vistas/Centro.java</file>
+            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Vistas/panelCentro.java</file>
+            <file>file:/Users/Iker/Desktop/Proyecto%20Final/Trabajo01/PROYECTO_JAVA/himevico2/src/Modelo/BD/GenericoBD.java</file>
         </group>
     </open-files>
 </project-private>

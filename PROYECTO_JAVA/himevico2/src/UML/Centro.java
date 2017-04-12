@@ -25,7 +25,7 @@ public class Centro {
     public Centro() {
     }
 
-    public Centro( String nombre, String calle, String ciudad, String provincia, int numero, int codPostal, int telefono) {
+    public Centro( String nombre, String calle,int numero,int codPostal,  String ciudad,String provincia, int telefono) {
       
         this.nombre = nombre;
         this.calle = calle;
