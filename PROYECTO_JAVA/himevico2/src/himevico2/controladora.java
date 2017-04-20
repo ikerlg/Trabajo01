@@ -5,6 +5,8 @@
  */
 package himevico2;
 
+import Modelo.BD.CentroBD;
+import Modelo.BD.TrabajadorBD;
 import Modelo.BD.tAdministradorBD;
 import UML.Acceso;
 import UML.Centro;
@@ -68,7 +70,7 @@ public class controladora {
     public static void subirCentro( String nombre, String calle, int numero, int codPostal, String ciudad, String provincia, int telefono){
            C=new Centro( nombre,calle,numero,codPostal,ciudad,provincia,telefono);
            try{
-         tAdministradorBD.altaCentro(C);}
+         CentroBD.altaCentro(C);}
            catch(Exception e){JOptionPane.showMessageDialog(null, "Error alta C");} 
     }
     public static void subirAcceso(){
@@ -88,7 +90,7 @@ public class controladora {
     public static void bajaCentro(String nombre){}
     public static  ArrayList  mostrarL()throws Exception{
          ArrayList<String>liCentros=new ArrayList();
-             liCentros=tAdministradorBD.listaCentros();
+             liCentros=CentroBD.listaCentros();
                      return liCentros;
      }
     public static Trabajador consultaT(String vDni){
@@ -98,26 +100,26 @@ public class controladora {
     }
     public static void bajaT(String dni){
     try{
-    tAdministradorBD.bajaT(dni);}
+  TrabajadorBD.bajaT(dni);}
     catch (Exception e){};
     }
     public static void modificarT(String dni, String nombre, String apellido1, String apellido2, String calle, String mano, String categoria, int numeroPortal, int piso, int telEmpresa, int telPersonal, Double salario, Date fechaNacimiento)
     {     
         T=new Trabajador(dni,nombre,apellido1,apellido2,calle,mano,categoria,numeroPortal,piso,telEmpresa,telPersonal,salario,fechaNacimiento);
         try{
-            tAdministradorBD.modificarT(T);}
+            TrabajadorBD.modificarT(T);}
         catch(Exception e){};
     
     
     }
     public static void consultaC(String nombre){
-       tAdministradorBD.listaCentros();
+      CentroBD.listaCentros();
     
     }
     public static void modificarC(String nombre, String calle, int numero, int codPostal, String ciudad, String provincia, int telefono){
     C=new Centro( nombre,calle,numero,codPostal,ciudad,provincia,telefono);
            try{
-         tAdministradorBD.modificaCentro(C);}
+        CentroBD.modificaCentro(C);}
            catch(Exception e){JOptionPane.showMessageDialog(null, "Error alta C");} 
     }
     

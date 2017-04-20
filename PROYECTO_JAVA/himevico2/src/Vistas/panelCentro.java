@@ -10,6 +10,7 @@ import Excepciones.CampoVacio;
 import Excepciones.FechaNoValida;
 import Excepciones.HorasNoValidas;
 import Excepciones.NombreNoValido;
+import Modelo.BD.CentroBD;
 import Modelo.BD.tAdministradorBD;
 import himevico2.controladora;
 import java.text.DateFormat;
@@ -209,7 +210,7 @@ public class panelCentro extends javax.swing.JFrame {
        try{
              int respuesta = javax.swing.JOptionPane.showConfirmDialog(this,"¿ Estas segur@?");
              if (respuesta == 0)
-               tAdministradorBD.bajaCentro(nombre);
+             CentroBD.bajaCentro(nombre);
           
        }
        catch(Exception e)

@@ -7,6 +7,7 @@ package Vistas;
 
 import Excepciones.*;
 import Modelo.BD.tAdministradorBD;
+import UML.Trabajador;
 import himevico2.controladora;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -291,9 +292,10 @@ public class datosTraba extends javax.swing.JFrame {
        // switch
     private void doModificar()
     { 
+        Trabajador t=new Trabajador();
         String vDni="";
         vDni=JOptionPane.showInputDialog(null,"Dni del trabajador a modificar?");
-        controladora.consultaT(vDni);
+       //(()) t=controladora.consultaT(vDni);
         try{
            if (datosCorrectos())
            {

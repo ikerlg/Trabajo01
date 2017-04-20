@@ -37,41 +37,7 @@ import oracle.jdbc.OracleTypes;
     private static ResultSet resultado;
    
      
-      public static void altaT(Trabajador t) throws Exception{
-            //También se puede hacer con herencia
-          
-            plantilla = "INSERT INTO TRABAJADOR (dni,nombre,apellido1,apellido2,calle,mano,categoria,numeroPortal,piso,telEmpresa,telPersonal,salario,fechaNacimiento) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
-         Psentencia = GenericoBD.CONECTAR().prepareStatement(plantilla);
-           Psentencia.setString(1,t.getDni());
-            Psentencia.setString(2,t.getNombre());
-           Psentencia.setString(3,t.getApellido1());
-         Psentencia.setString(4,t.getApellido2());
-           Psentencia.setString(5,t.getCalle());
-            Psentencia.setInt(8,t.getNumeroPortal());
-           Psentencia.setInt(9,t.getPiso());
-           Psentencia.setString(6,t.getMano());
-           Psentencia.setInt(10,t.getTelEmpresa());
-           Psentencia.setInt(11,t.getTelPersonal());
-            Psentencia.setInt(11,t.getTelPersonal());
-           Psentencia.setDouble(12,t.getSalario());
-           Psentencia.setString(7,t.getCategoria());
-        
-            java.sql.Date sqlDate =  new java.sql.Date( t.getFechaNacimiento().getTime());
-          Psentencia.setDate(13, sqlDate);
      
-            plantilla="INSERT INTO ACCESO(USUARIO,CONTRASEÑA,DNI)VALUES(?,?,?)";
-             Psentencia = GenericoBD.CONECTAR().prepareStatement(plantilla);
-             Psentencia.setString(1,t.getA().getUsuario());
-             Psentencia.setString(2,t.getA().getContraseña());
-             Psentencia.setString(3, t.getDni());
-             //centro arraylist pasarle el T
-//          plantilla="INSERT INTO CENTRO()"   
-          
-          Psentencia.executeUpdate();
-            
-            // si algo falla en el insert ya saltará la excepción correspondiente.
-            GenericoBD.cerrarBD();
-    }
     public static java.util.Calendar conversionTimeCalendar(java.sql.Time hora) throws Exception{
         // java.sql.Time -- String -- Calendar
         String strhora = hora.toString();
@@ -85,124 +51,13 @@ import oracle.jdbc.OracleTypes;
         String strhora = hora.toString();
         return LocalTime.parse(strhora);
     } 
-    public static void bajaT(String dni) throws Exception{
-            GenericoBD.CONECTAR();
-            plantilla = "delete from TRABAJADOR where dni = ?";
-           Psentencia = GenericoBD.CONECTAR().prepareStatement(plantilla);
-          Psentencia.setString(1,t.getDni());
-            
-         Psentencia.executeUpdate();
-            GenericoBD.cerrarBD();
-    }
+   
 
-    public static void modificarT(Trabajador t) throws Exception{
-      
-            plantilla = "update TRABAJADOR set  nombre=?,apellido1=?,apellido2=?,calle=?,numeroPortal=?"
-                    + "piso=?,mano=?,telEmpresa=?,telPersonal=?,fechaNacimiento=?,salario=?,categoria=?,idCentro=? where dni = ?";
-          Psentencia = GenericoBD.CONECTAR().prepareStatement(plantilla);
-            
-
-            Psentencia.setString(1,t.getNombre());
-           Psentencia.setString(2,t.getApellido1());
-         Psentencia.setString(3,t.getApellido2());
-           Psentencia.setString(4,t.getCalle());
-            Psentencia.setInt(5,t.getNumeroPortal());
-           Psentencia.setInt(6,t.getPiso());
-           Psentencia.setString(7,t.getMano());
-           Psentencia.setInt(8,t.getTelEmpresa());
-           Psentencia.setInt(9,t.getTelPersonal());
-          
-           Psentencia.setDouble(11,t.getSalario());
-           Psentencia.setString(12,t.getCategoria());
-           Psentencia.setString(13, t.getC().getIdCentro());
-            java.sql.Date sqlDate =  new java.sql.Date(t.getFechaNacimiento().getTime());
-          Psentencia.setDate(10, sqlDate);        
-          Psentencia.executeUpdate();
-            GenericoBD.cerrarBD();
-    }
-    public static void altaCentro(Centro c) throws Exception{
-        try{ 
-           
-            plantilla = "INSERT INTO CENTRO(nombre,calle,numero,codpostal,ciudad,PROVINCIA,TELEFONO) VALUES (?,?,?,?,?,?,?)";
-            Psentencia= GenericoBD.CONECTAR().prepareStatement(plantilla);
-           
-            Psentencia.setString(1,c.getNombre());
-            Psentencia.setString(2,c.getCalle());
-            Psentencia.setInt(3,c.getNumero());
-             Psentencia.setInt(4, c.getCodPostal());
-              Psentencia.setString(5,c.getCiudad() );
-               Psentencia.setString(6, c.getProvincia());
-                Psentencia.setInt(7, c.getTelefono());
-             Psentencia.executeUpdate();
-            JOptionPane.showMessageDialog(null, "subido");
-            GenericoBD.cerrarBD();
-            
-          }
-          catch(Exception e){
-             // La empresa existe, no es un problema
-              // El resto de las excepciones si las relanzo
-              GenericoBD.cerrarBD();
-          }
-    }
-     public static void bajaCentro(String nombre) throws Exception{
-          
-            plantilla = "delete from CENTRO where nombre = ?";
-           Psentencia = GenericoBD.CONECTAR().prepareStatement(plantilla);
-          Psentencia.setString(1,c.getNombre());
-            
-         Psentencia.executeUpdate();
-            GenericoBD.cerrarBD();
-    }
-     public static void modificaCentro(Centro c)throws Exception {
-     
-      try{ 
-           
-            plantilla = "update CENTRO set idcentro=?,nombre=?,calle=?,numero=?,CodPostal=?,ciudad=?,provincia=?,telefono=?)";
-            Psentencia= GenericoBD.CONECTAR().prepareStatement(plantilla);
-             Psentencia.setString(1,c.getIdCentro());
-            Psentencia.setString(2,c.getNombre());
-            Psentencia.setString(3,c.getCalle());
-            Psentencia.setInt(4,c.getNumero());
-             Psentencia.setInt(5, c.getCodPostal());
-              Psentencia.setString(6,c.getCiudad() );
-               Psentencia.setString(7, c.getProvincia());
-                Psentencia.setInt(8, c.getTelefono());
-             Psentencia.executeUpdate();
-            
-            GenericoBD.cerrarBD();
-            
-          }
-          catch(Exception e){
-             // La empresa existe, no es un problema
-              // El resto de las excepciones si las relanzo
-              GenericoBD.cerrarBD();     
-                       }
-                }
+    
+   
   
    //callables:
-public static ArrayList listaCentros(){
-         String lu="";
-        ArrayList<String>listacentros=new ArrayList();
-
-try{
-
-String sql= "{ call centros2 (?)} ";
-            CallableStatement llamada = GenericoBD.CONECTAR().prepareCall(sql);
-                 llamada.registerOutParameter(1,OracleTypes.CURSOR); //parametro OUT
-                  llamada.execute();
-             ResultSet res = (ResultSet)llamada.getObject (1);    
-               
-//ejecutar el procedimiento
-if(res.next())
-        {
-    lu=res.getString("NOMBRE");
-    listacentros.add(lu);
-          } 
-     con.close();} 
-        catch (Exception e) {}
-//fin de mai      
-return listacentros;
-    }   
+ 
 
 
 

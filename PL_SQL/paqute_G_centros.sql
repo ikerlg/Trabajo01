@@ -1,17 +1,17 @@
 
-CREATE or replace package gest_centros is
-		consultaC SYS_REFCURSOR;
+CREATE or replace package paquetecentros is
+		type tipocursor  is SYS_REFCURSOR;
 		PROCEDURE consulta_Centro (vnombre in Centro.nombre%type,consultaC OUT SYS_REFCURSOR);
-		PROCEDURE listacentros(NOMBRE OUT SYS_REFCURSOR);
+		PROCEDURE listacentros(nombreC out tipocursor);
 	end gest_centros;
 /*-------------------------------------------------------------------*/
 
 CREATE or replace package body gest_centros is
- PROCEDURE listacentros(NOMBRE OUT SYS_REFCURSOR) AS
+ PROCEDURE listacentros(nombreC out tipocursor) IS
         BEGIN
-        OPEN NOMBRE FOR
+        OPEN nombreC FOR
         SELECT "A1"."NOMBRE" "NOMBRE" FROM "PROYECTOFINAL"."CENTRO" "A1";
-    CLOSE NOMBRE;
+    CLOSE nombreC;
     END;
 PROCEDURE consulta_Centro (vnombre in Centro.nombre%type,consultaC OUT SYS_REFCURSOR) AS
     BEGIN
