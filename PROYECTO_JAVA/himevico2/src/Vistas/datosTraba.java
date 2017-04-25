@@ -33,7 +33,7 @@ public class datosTraba extends javax.swing.JFrame {
   
  public datosTraba(String operacion) {
       ArrayList<String>lcen=new ArrayList();
-        Operacion = controladora.selecOperacion(operacion);
+        Operacion = operacion;
         initComponents();
           setLocationRelativeTo(null);
              try{
@@ -94,7 +94,7 @@ public class datosTraba extends javax.swing.JFrame {
         usuario = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         tusuarioT = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        tcontraT = new javax.swing.JTextField();
         comboC = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -244,8 +244,8 @@ public class datosTraba extends javax.swing.JFrame {
         jLabel8.setBounds(10, 70, 80, 16);
         acceso.add(tusuarioT);
         tusuarioT.setBounds(90, 20, 170, 30);
-        acceso.add(jTextField1);
-        jTextField1.setBounds(90, 60, 170, 30);
+        acceso.add(tcontraT);
+        tcontraT.setBounds(90, 60, 170, 30);
 
         getContentPane().add(acceso);
         acceso.setBounds(300, 270, 270, 110);
@@ -300,7 +300,7 @@ public class datosTraba extends javax.swing.JFrame {
            if (datosCorrectos())
            {
              javax.swing.JOptionPane.showMessageDialog(this,"Datos correctos. Vamos a grabar los cambios");
-            controladora.modificarT(tdniT.getText(),tnombreT.getText(),tprimerAT.getText(),tsegundoAT.getText(),tcalleT.getText(),tmanoT.getText(),Categoria.getSelection().toString(),Integer.parseInt(tportalT.getText()),Integer.parseInt(tpisoT.getText()),Integer.parseInt(ttlfempreT.getText()),Integer.parseInt(ttlfpersoT.getText()),Double.parseDouble(tSalarioT.getText()),calendarnacimientoT.getDate());
+            controladora.modificarT(tdniT.getText(),tnombreT.getText(),tprimerAT.getText(),tsegundoAT.getText(),tcalleT.getText(),tmanoT.getText(),Categoria.getSelection().toString(),Integer.parseInt(tportalT.getText()),Integer.parseInt(tpisoT.getText()),Integer.parseInt(ttlfempreT.getText()),Integer.parseInt(ttlfpersoT.getText()),Double.parseDouble(tSalarioT.getText()), (java.sql.Date) calendarnacimientoT.getDate());
             
            }
        }
@@ -332,7 +332,7 @@ public class datosTraba extends javax.swing.JFrame {
            if (datosCorrectos())
            {
              javax.swing.JOptionPane.showMessageDialog(this,"Datos correctos. Vamos a insertar en la base de  datos");
-         controladora.subirTR(tdniT.getText(),tnombreT.getText(),tprimerAT.getText(),tsegundoAT.getText(),tcalleT.getText(),tmanoT.getText(),Categoria.getSelection().toString(),Integer.parseInt(tportalT.getText()),Integer.parseInt(tpisoT.getText()),Integer.parseInt(ttlfempreT.getText()),Integer.parseInt(ttlfpersoT.getText()),Double.parseDouble(tSalarioT.getText()),calendarnacimientoT.getDate());
+         controladora.subirTR(tdniT.getText(),tnombreT.getText(),tprimerAT.getText(),tsegundoAT.getText(),tcalleT.getText(),tmanoT.getText(),Categoria.getSelection().toString(),Integer.parseInt(tportalT.getText()),Integer.parseInt(tpisoT.getText()),Integer.parseInt(ttlfempreT.getText()),Integer.parseInt(ttlfpersoT.getText()),Double.parseDouble(tSalarioT.getText()), (java.sql.Date) calendarnacimientoT.getDate(),tusuarioT.getText(),tcontraT.getText());
            // controladora.subirCebtro(operacion, operacion, operacion, operacion, ERROR, NORMAL, ERROR);
             //controladora.
            }
@@ -488,10 +488,10 @@ public class datosTraba extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JRadioButton logistica;
     private javax.swing.JTextField tSalarioT;
     private javax.swing.JTextField tcalleT;
+    private javax.swing.JTextField tcontraT;
     private javax.swing.JTextField tdniT;
     private javax.swing.JTextField tmanoT;
     private javax.swing.JTextField tnombreT;

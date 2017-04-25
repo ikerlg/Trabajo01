@@ -5,7 +5,7 @@
  */
 package UML;
 
-import java.util.Date;
+import java.sql.*;
 
 
 
@@ -33,7 +33,7 @@ public class Trabajador {
     public Trabajador() {
     }
 
-    public Trabajador(String dni, String nombre, String apellido1, String apellido2, String calle, String mano, String categoria, int numeroPortal, int piso, int telEmpresa, int telPersonal, Double salario, Date fechaNacimiento) {
+    public Trabajador(String dni, String nombre, String apellido1, String apellido2, String calle, String mano, String categoria, int numeroPortal, int piso, int telEmpresa, int telPersonal, Double salario, Date fechaNacimiento,Acceso A) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -47,8 +47,24 @@ public class Trabajador {
         this.telPersonal = telPersonal;
         this.salario = salario;
         this.fechaNacimiento = fechaNacimiento;
-     
+        this.A=A;
     }
+
+    public Trabajador(String dni, String nombre, String apellido1, String apellido2, String calle, String mano, String categoria, int numeroPortal, int piso, int telEmpresa, int telPersonal, Double salario, Date fechaNacimiento) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.calle = calle;
+        this.mano = mano;
+        this.categoria = categoria;
+        this.numeroPortal = numeroPortal;
+        this.piso = piso;
+        this.telEmpresa = telEmpresa;
+        this.telPersonal = telPersonal;
+        this.salario = salario;
+    }
+    
 
    
     public String getDni() {

@@ -5,7 +5,9 @@
  */
 package UML;
 
-import sun.util.calendar.LocalGregorianCalendar.Date;
+import java.sql.*;
+
+
 
 /**
  *
@@ -13,14 +15,15 @@ import sun.util.calendar.LocalGregorianCalendar.Date;
  */
 public class Viaje {
  private    String albaran;
-  private   Date horaInicio;
+
+ private   Date horaInicio;
   private   Date horaFin;
  private    Parte P;
 
     public Viaje() {
     }
 
-    public Viaje(String albaran, Date horaInicio, Date horaFin, Parte P) {
+    public Viaje(String albaran, Date horaInicio, Date horaFin) {
         this.albaran = albaran;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;

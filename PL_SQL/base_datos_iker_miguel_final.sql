@@ -1,5 +1,3 @@
-
-
 DROP TABLE Viaje CASCADE CONSTRAINTS ;
 
 DROP TABLE Parte CASCADE CONSTRAINTS ;
@@ -48,10 +46,11 @@ CREATE TABLE Trabajador
     telfPersonal      NUMBER   (15) ,
     fechaNacimiento   DATE ,
     salario           NUMBER   (15),
-    categoria         VARCHAR2 (25) NOT NULL ,
+    categoria         VARCHAR2 (1) NOT NULL ,
     Centro_idCentro   NUMBER   (3)  NOT NULL ,
     CONSTRAINT Trabajador_PK PRIMARY KEY ( dni ),
-    CONSTRAINT Trabajador_Centro_FK FOREIGN KEY ( Centro_idCentro ) REFERENCES Centro ( idCentro )
+    CONSTRAINT Trabajador_Centro_FK FOREIGN KEY ( Centro_idCentro ) REFERENCES Centro ( idCentro ),
+    CONSTRAINT CHK_Cat CHECK ((categoria = 'a') or (categoria = 'l'))
   ) ;
 
 CREATE TABLE Acceso
@@ -101,11 +100,35 @@ CREATE TABLE Parte
 
 CREATE TABLE Viaje
   (
-    albaran         VARCHAR2 (10) NOT NULL ,
+    idViaje   NUMBER (6)
+		GENERATED ALWAYS AS IDENTITY 
+                        MINVALUE 1 
+                        MAXVALUE 999999
+                        INCREMENT BY 1 
+                        START WITH 1  
+                        NOORDER  
+                        NOCYCLE  NOT NULL ENABLE
+		CONSTRAINT idViaje PRIMARY KEY ,
     horaInicio      DATE NOT NULL ,
     horaFin         DATE NOT NULL ,
     Parte_idParte 	NUMBER (6) NOT NULL , 
-    CONSTRAINT Viaje_PK PRIMARY KEY ( albaran ) ,
     CONSTRAINT Viaje_Parte_FK FOREIGN KEY ( Parte_idParte ) REFERENCES Parte ( idParte )
   ) ;
 
+-- INSERTAR DATOS DE PRUEBA:
+
+--desc centro
+-- insertar un centro
+--insert into centro values(DEFAULT, 'Informatica', 'Pradera', 2, 01002, 'vitoria', 'alava', 945268459);
+
+--select *
+--from centro;
+
+--desc trabajador
+-- insertar un trabajador
+--insert into trabajador values('11111111A', 'Miguel', 'Olmo', 'Hernando','Palomas', 1, 2, 'Derecha', 945268444, 945284123, '19/07/1988', 288, 'Administrador', 1);
+
+--select *
+--from trabajador;
+
+--insert into trabajador values('44344434A', 'Jona', 'El', 'Piloto','LasCarreras', 1, 2, 'Derecha', 902201222, 903666666, '19/07/1988', 288, 'L', 1);

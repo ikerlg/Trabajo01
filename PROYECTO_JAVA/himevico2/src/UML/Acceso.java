@@ -13,15 +13,16 @@ public class Acceso {
 private    String usuario;
  private    String contraseña;
   private   Trabajador T;
- private    String idAcceso;
+
 
     public Acceso() {
     }
 
-    public Acceso(String usuario, String contraseña,String idAcceso) {
+    public Acceso(String usuario, String contraseña,String dni) {
         this.usuario = usuario;
         this.contraseña = contraseña;
-        this.idAcceso=idAcceso;
+        this.T.setDni(dni);
+        
     }
 
     public String getUsuario() {

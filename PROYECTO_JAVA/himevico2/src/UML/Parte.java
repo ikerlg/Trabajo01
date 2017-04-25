@@ -6,7 +6,7 @@
 package UML;
 
 import java.util.ArrayList;
-import sun.util.calendar.LocalGregorianCalendar.Date;
+import java.sql.*;
 
 /**
  *
@@ -23,16 +23,18 @@ public class Parte {
   private   Double dietas;
   private   Double otrosGastos;
    private  String incidencias;
-  private   Double horasTRabajadas;
+  private   Double horasTrabajadas;
   private   tAdministrador tA;
    private  tLogistica tL;
   private   Vehiculo V;
-  private   ArrayList<Viaje> listViajes;
+  private   ArrayList<Viaje> listaViajes;
 
     public Parte() {
     }
 
-    public Parte(String idParte, Date fecha, Double kmInicio, Double kmFinal, boolean finalizado, Double gasoil, Double autopista, Double dietas, Double otrosGastos, String incidencias, Double horasTRabajadas) {
+   
+
+    public Parte( Date fecha, Double kmInicio, Double kmFinal, boolean finalizado, Double gasoil, Double autopista, Double dietas, Double otrosGastos, String incidencias, Double horasTRabajadas) {
         this.idParte = idParte;
         this.fecha = fecha;
         this.kmInicio = kmInicio;
@@ -43,23 +45,33 @@ public class Parte {
         this.dietas = dietas;
         this.otrosGastos = otrosGastos;
         this.incidencias = incidencias;
-        this.horasTRabajadas = horasTRabajadas;
-         listViajes= new ArrayList();
+        this.horasTrabajadas = horasTRabajadas;
+            listaViajes = new ArrayList();;
+     
     }
 
-    public Parte(String idParte, Date fecha, Double kmInicio, Double kmFinal, boolean finalizado, Double gasoil, Double autopista, Double dietas, Double otrosGastos, String incidencias, Double horasTRabajadas, ArrayList<Viaje> listViajes) {
-        this.idParte = idParte;
-        this.fecha = fecha;
-        this.kmInicio = kmInicio;
-        this.kmFinal = kmFinal;
-        this.finalizado = finalizado;
-        this.gasoil = gasoil;
-        this.autopista = autopista;
-        this.dietas = dietas;
-        this.otrosGastos = otrosGastos;
-        this.incidencias = incidencias;
-        this.horasTRabajadas = horasTRabajadas;
-        this.listViajes = listViajes;
+    public Double getHorasTrabajadas() {
+        return horasTrabajadas;
+    }
+
+    public void setHorasTrabajadas(Double horasTrabajadas) {
+        this.horasTrabajadas = horasTrabajadas;
+    }
+
+    public Vehiculo getV() {
+        return V;
+    }
+
+    public void setV(Vehiculo V) {
+        this.V = V;
+    }
+
+    public ArrayList<Viaje> getListViajes() {
+        return listaViajes;
+    }
+
+    public void setListViajes(ArrayList<Viaje> listViajes) {
+        this.listaViajes = listViajes;
     }
 
     public String getIdParte() {
@@ -143,11 +155,11 @@ public class Parte {
     }
 
     public Double getHorasTRabajadas() {
-        return horasTRabajadas;
+        return horasTrabajadas;
     }
 
     public void setHorasTRabajadas(Double horasTRabajadas) {
-        this.horasTRabajadas = horasTRabajadas;
+        this.horasTrabajadas = horasTRabajadas;
     }
 
     public tAdministrador gettA() {

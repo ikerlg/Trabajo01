@@ -52,7 +52,9 @@ public class TrabajadorBD {
         
             java.sql.Date sqlDate =  new java.sql.Date( t.getFechaNacimiento().getTime());
           Psentencia.setDate(13, sqlDate);
-     
+             Psentencia.executeUpdate();
+             
+             //insertamos datos acceso para ese trabajador
             plantilla="INSERT INTO ACCESO(USUARIO,CONTRASEÑA,DNI)VALUES(?,?,?)";
              Psentencia = GenericoBD.CONECTAR().prepareStatement(plantilla);
              Psentencia.setString(1,t.getA().getUsuario());
